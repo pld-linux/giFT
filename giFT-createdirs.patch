@@ -1,0 +1,21 @@
+--- a/src/download.c	2004-01-04 15:14:08.000000000 +0100
++++ b/src/download.c	2004-01-04 15:51:00.000000000 +0100
+@@ -222,7 +222,7 @@
+ 		}
+ 
+ 		sprintf (uniq, "%04lX%08lX%08lX.%s", tv.tv_sec % 0xffff, tv.tv_usec,
+-		         (unsigned long) transfer->total, transfer->filename);
++		         (unsigned long) transfer->total, file_basename (transfer->filename));
+ 	} while (file_exists (uniq));
+ 
+ 	return uniq;
+@@ -494,6 +494,9 @@
+ 
+ static char *move_file (char *src, char *dst)
+ {
++	/* create path for dst */
++	file_create_path (dst, 0x755);
++
+ 	file_mv (src, dst);
+ 	free (src);
+ 
