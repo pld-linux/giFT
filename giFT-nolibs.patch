@@ -1,0 +1,19 @@
+--- giFT-0.11.1/configure.ac.orig	Wed Jul 16 15:56:04 2003
++++ giFT-0.11.1/configure.ac	Wed Jul 16 16:03:14 2003
+@@ -133,11 +133,11 @@
+ dnl Checks for depended libraries...
+ dnl ###########################################################################
+ 
+-AC_CHECK_LIB(nsl, gethostbyname)
+-AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(mingwex, opendir)
+-AC_CHECK_LIB(bind, inet_ntoa)
+-AC_CHECK_LIB(be, openlog)
++AC_SEARCH_LIBS(gethostbyname, nsl)
++AC_SEARCH_LIBS(socket, socket)
++AC_SEARCH_LIBS(opendir, mingwex)
++AC_SEARCH_LIBS(inet_ntoa, bind)
++AC_SEARCH_LIBS(openlog, be)
+ 
+ # I think this is used for mingw32?  Can anyone confirm?
+ GIFT_CHECK_WINSOCK_LIBS
