@@ -1,15 +1,16 @@
+
+%define		sname	gift
+
 Summary:	The generic interface to FastTrack
 Summary(pl):	Interfejs do FastTracka
 Name:		giFT
-Version:	0.11.1
-Release:	2
+Version:	0.11.3
+Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://dl.sourceforge.net/gift/%{name}-%{version}.tar.bz2
-# Source0-md5:	84a03d803abd0f93634f588e37340d6f
-Patch0:		%{name}-opt.patch
+Source0:	http://dl.sourceforge.net/gift/%{sname}-%{version}.tar.bz2
+# Source0-md5:	fc93e3784224c16e96f9d8a540d9d75c
 Patch1:		%{name}-nolibs.patch
-Patch2:		%{name}-magic.patch
 URL:		http://giFT.sourceforge.net/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
@@ -61,16 +62,15 @@ The generic interface to FastTrack static libraries.
 Biblioteki statyczne interfejsu do FastTracka.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -q -n %{sname}-%{version}
 %patch1 -p1
-%patch2 -p1
 
 %build
 rm -f missing
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	--enable-libmagic \
@@ -84,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.a
+mkdir $RPM_BUILD_ROOT%{_libdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -98,8 +98,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_libdir}/%{name}
-%attr(755,root,root) %{_libdir}/%{name}/*.so
-%{_libdir}/%{name}/*.la
 %{_datadir}/%{name}
 %{_mandir}/man?/*
 
