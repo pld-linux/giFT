@@ -59,14 +59,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf README AUTHORS TODO ChangeLog NEWS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README AUTHORS TODO ChangeLog NEWS
 %attr(755,root,root) %{_bindir}/*
 
 %files devel
