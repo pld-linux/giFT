@@ -82,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %dir %{_libdir}/%{name}
 %attr(755,root,root) %{_libdir}/%{name}/*.so
+%{_libdir}/%{name}/*.la
 %{_datadir}/%{name}
 %{_mandir}/man?/*
 
