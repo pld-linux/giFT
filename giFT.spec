@@ -5,7 +5,7 @@ Summary:	The generic interface to FastTrack
 Summary(pl):	Interfejs do FastTracka
 Name:		giFT
 Version:	0.11.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/gift/%{sname}-%{version}.tar.bz2
