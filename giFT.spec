@@ -18,7 +18,7 @@ Group:		Applications/Communications
 Group(de):	Applikationen/Kommunikation
 Group(pl):	Aplikacje/Komunikacja
 Summary:	The generic interface to FastTrack development files
-Requires:	giFT = %{version}
+Requires:	%{name} = %{version}
 
 %description devel
 The generic interface to FastTrack development files
@@ -28,7 +28,7 @@ Group:		Applications/Communications
 Group(de):	Applikationen/Kommunikation
 Group(pl):	Aplikacje/Komunikacja
 Summary:	The generic interface to FastTrack static libraries
-Requires:	giFT-devel = %{version}
+Requires:	%{name}-devel = %{version}
 
 %description static
 The generic interface to FastTrack static libraries
