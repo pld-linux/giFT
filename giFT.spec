@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://prdownloads.sourceforge.net/gift/%{name}-%{version}.tar.gz
-URL:		http://giFT.sourceforge.net
+URL:		http://giFT.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
