@@ -32,7 +32,10 @@ Summary(pl):	Pliki developerskie dla giFT
 Requires:	%{name} = %{version}
 
 %description devel
-The generic interface to FastTrack development files
+The generic interface to FastTrack development files.
+
+%description devel -l pl
+Pliki developerskie interfejsu do FastTracka.
 
 %package static
 Group:		Applications/Communications
@@ -42,7 +45,10 @@ Summary:	The generic interface to FastTrack static libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-The generic interface to FastTrack static libraries
+The generic interface to FastTrack static libraries.
+
+%description static -l pl
+Biblioteki statyczne interfejsu do FastTracka.
 
 %prep
 %setup -q -n giFT-0.10.0
@@ -52,7 +58,7 @@ rm -f missing
 aclocal
 autoconf
 automake -a -c
-%configure 
+%configure
 %{__make}
 
 %install
