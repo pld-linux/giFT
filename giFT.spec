@@ -5,7 +5,8 @@ Version:	0.10.0.cvs20020202
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://prdownloads.sourceforge.net/gift/%{name}-%{version}.tar.gz
+#Source0:	http://dl.sourceforge.net/gift/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 URL:		http://giFT.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
