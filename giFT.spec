@@ -12,11 +12,10 @@ BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The generic interface to FastTrack network.
-This package contains 'giFT' daemon.
-After running it you can use some FT client e.g.:
-'fiFT-fe' gtk+ client (provided by this package)
-'giFTcurs' ncurses client (provided by package giFTcurs)
+The generic interface to FastTrack network. This package contains
+'giFT' daemon. After running it you can use some FT client e.g.:
+'fiFT-fe' gtk+ client (provided by this package) 'giFTcurs' ncurses
+client (provided by package giFTcurs)
 
 %description -l pl
 Interfejs do FastTracka.
