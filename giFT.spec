@@ -5,8 +5,6 @@ Version:	0.10.0.cvs20020202
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Source0:	http://prdownloads.sourceforge.net/gift/%{name}-%{version}.tar.gz
 URL:		http://giFT.sourceforge.net
 BuildRequires:	automake
@@ -25,8 +23,6 @@ Interfejs do FastTracka.
 
 %package devel
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Summary:	The generic interface to FastTrack development files
 Summary(pl):	Pliki developerskie dla giFT
 Requires:	%{name} = %{version}
@@ -39,8 +35,6 @@ Pliki developerskie interfejsu do FastTracka.
 
 %package static
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Summary:	The generic interface to FastTrack static libraries
 Requires:	%{name}-devel = %{version}
 
