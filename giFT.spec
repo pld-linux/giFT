@@ -1,7 +1,7 @@
 Summary:	The generic interface to FastTrack
 Summary(pl):	Interfejs do FastTracka
 Name:		giFT
-Version:	0.9.7
+Version:	0.10.0.cvs20020202
 Release:	1
 License:	GPL
 Group:		Applications/Communications
@@ -14,7 +14,11 @@ BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The generic interface to FastTrack.
+The generic interface to FastTrack network.
+This package contains 'giFT' daemon.
+After running it you can use some FT client e.g.:
+'fiFT-fe' gtk+ client (provided by this package)
+'giFTcurs' ncurses client (provided by package giFTcurs)
 
 %description -l pl
 Interfejs do FastTracka.
@@ -41,7 +45,7 @@ Requires:	%{name}-devel = %{version}
 The generic interface to FastTrack static libraries
 
 %prep
-%setup -q
+%setup -q -n giFT-0.10.0
 
 %build
 rm -f missing
@@ -55,6 +59,8 @@ automake -a -c
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
+#install -d $RPM_BUILD_ROOT%{_includedir}
+#cp -a lib/
 
 gzip -9nf README AUTHORS COPYING TODO ChangeLog INSTALL NEWS
 
@@ -68,9 +74,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%dir %{_includedir}/giFT
-%{_includedir}/giFT/*.h
+# cvs version does not install includes /klakier
+# commented temporarily
+#%dir %{_includedir}/giFT
+#%{_includedir}/giFT/*.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+# this also does not build
+#%{_libdir}/*.a
