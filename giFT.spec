@@ -1,4 +1,5 @@
 Summary:	The generic interface to FastTrack
+Summary(pl):	Interfejs do FastTracka
 Name:		giFT
 Version:	0.9.7
 Release:	1
@@ -6,18 +7,24 @@ License:	GPL
 Group:		Applications/Communications
 Group(de):	Applikationen/Kommunikation
 Group(pl):	Aplikacje/Komunikacja
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/gift/%{name}-%{version}.tar.gz
 URL:		http://giFT.sourceforge.net
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The generic interface to FastTrack
+The generic interface to FastTrack.
+
+%description -l pl
+Interfejs do FastTracka.
 
 %package devel
 Group:		Applications/Communications
 Group(de):	Applikationen/Kommunikation
 Group(pl):	Aplikacje/Komunikacja
 Summary:	The generic interface to FastTrack development files
+Summary(pl):	Pliki developerskie dla giFT
 Requires:	%{name} = %{version}
 
 %description devel
@@ -37,6 +44,10 @@ The generic interface to FastTrack static libraries
 %setup -q
 
 %build
+rm -f missing
+aclocal
+autoconf
+automake -a -c
 %configure 
 %{__make}
 
