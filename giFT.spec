@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Communications
 #Source0:	http://dl.sourceforge.net/gift/%{name}-%{version}.tar.gz
 Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	2383f2cbaa08deb69cef1ada4e7f2d43
 URL:		http://giFT.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
