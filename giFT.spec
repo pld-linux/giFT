@@ -2,19 +2,22 @@ Summary:	The generic interface to FastTrack
 Summary(pl):	Interfejs do FastTracka
 Name:		giFT
 Version:	0.11.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/gift/%{name}-%{version}.tar.bz2
 # Source0-md5:	84a03d803abd0f93634f588e37340d6f
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-nolibs.patch
+Patch2:		%{name}-magic.patch
 URL:		http://giFT.sourceforge.net/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	bzip2-devel
 BuildRequires:	db-devel
 BuildRequires:	libltdl-devel
+BuildRequires:	libmagic-devel
 BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
 BuildRequires:	zlib-devel
@@ -61,6 +64,7 @@ Biblioteki statyczne interfejsu do FastTracka.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
@@ -69,6 +73,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure \
+	--enable-libmagic \
 	--enable-static
 
 %{__make}
