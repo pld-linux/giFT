@@ -74,9 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 # cvs version does not install includes /klakier
 # commented temporarily
 #%dir %{_includedir}/giFT
-#%{_includedir}/giFT/*.h
+#%%{_includedir}/giFT/*.h
 
 %files static
 %defattr(644,root,root,755)
 # this also does not build
-#%{_libdir}/*.a
+#%%{_libdir}/*.a
