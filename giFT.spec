@@ -28,7 +28,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The generic interface to FastTrack network. This package contains
 'giFT' daemon. After running it you can use some FT client e.g.:
-'fiFT-fe' gtk+ client or 'giFTcurs' ncurses client (provided by
+'fiFT-fe' GTK+ client or 'giFTcurs' ncurses client (provided by
 package giFTcurs).
 
 %description -l pl
