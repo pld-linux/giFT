@@ -12,6 +12,7 @@ Source0:	http://dl.sourceforge.net/gift/%{sname}-%{version}.tar.bz2
 # Source0-md5:	1c70477af403af142359d07ee4a03348
 Patch1:		%{name}-nolibs.patch
 Patch2:		%{name}-home_etc.patch
+Patch3:		%{name}-createdirs.patch
 URL:		http://giFT.sourceforge.net/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	autoconf
@@ -66,6 +67,7 @@ Biblioteki statyczne interfejsu do FastTracka.
 %setup -q -n %{sname}-%{version}
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 rm -f missing
