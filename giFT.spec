@@ -23,18 +23,19 @@ Interfejs do FastTracka.
 %package devel
 Group:		Applications/Communications
 Summary:	The generic interface to FastTrack development files
-Summary(pl):	Pliki developerskie dla giFT
+Summary(pl):	Pliki do rozwoju programów korzystaj±cych z giFT
 Requires:	%{name} = %{version}
 
 %description devel
 The generic interface to FastTrack development files.
 
 %description devel -l pl
-Pliki developerskie interfejsu do FastTracka.
+Pliki do rozwoju programów korzystaj±cego z interfejsu do FastTracka.
 
 %package static
 Group:		Applications/Communications
 Summary:	The generic interface to FastTrack static libraries
+Summary(pl):	Biblioteki statyczne giFT
 Requires:	%{name}-devel = %{version}
 
 %description static
