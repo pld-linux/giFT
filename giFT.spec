@@ -42,7 +42,7 @@ pakiecie giFTcurs).
 Summary:	The generic interface to FastTrack development files
 Summary(pl):	Pliki do rozwoju programów korzystaj±cych z giFT
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	zlib-devel
 
 %description devel
@@ -55,7 +55,7 @@ Pliki do rozwoju programów korzystaj±cego z interfejsu do FastTracka.
 Summary:	The generic interface to FastTrack static libraries
 Summary(pl):	Biblioteki statyczne giFT
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 The generic interface to FastTrack static libraries.
