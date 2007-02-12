@@ -2,7 +2,7 @@
 %define		sname	gift
 
 Summary:	The generic interface to FastTrack
-Summary(pl):	Interfejs do FastTracka
+Summary(pl.UTF-8):   Interfejs do FastTracka
 Name:		giFT
 Version:	0.11.8.1
 Release:	1
@@ -32,15 +32,15 @@ The generic interface to FastTrack network. This package contains
 'fiFT-fe' GTK+ client or 'giFTcurs' ncurses client (provided by
 package giFTcurs).
 
-%description -l pl
-Ogólny interfejs do sieci FastTrack. Ten pakiet zawiera demona giFT.
-Po jego uruchomieniu mo¿na u¿ywaæ którego¶ z klientów FT, np. giFT-fe
-opartego na GTK+ czy giFTcurs opartego na ncurses (dostêpnego w
+%description -l pl.UTF-8
+OgÃ³lny interfejs do sieci FastTrack. Ten pakiet zawiera demona giFT.
+Po jego uruchomieniu moÅ¼na uÅ¼ywaÄ‡ ktÃ³regoÅ› z klientÃ³w FT, np. giFT-fe
+opartego na GTK+ czy giFTcurs opartego na ncurses (dostÄ™pnego w
 pakiecie giFTcurs).
 
 %package devel
 Summary:	The generic interface to FastTrack development files
-Summary(pl):	Pliki do rozwoju programów korzystaj±cych z giFT
+Summary(pl.UTF-8):   Pliki do rozwoju programÃ³w korzystajÄ…cych z giFT
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	zlib-devel
@@ -48,19 +48,19 @@ Requires:	zlib-devel
 %description devel
 The generic interface to FastTrack development files.
 
-%description devel -l pl
-Pliki do rozwoju programów korzystaj±cego z interfejsu do FastTracka.
+%description devel -l pl.UTF-8
+Pliki do rozwoju programÃ³w korzystajÄ…cego z interfejsu do FastTracka.
 
 %package static
 Summary:	The generic interface to FastTrack static libraries
-Summary(pl):	Biblioteki statyczne giFT
+Summary(pl.UTF-8):   Biblioteki statyczne giFT
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 The generic interface to FastTrack static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne interfejsu do FastTracka.
 
 %prep
