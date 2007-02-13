@@ -2,7 +2,7 @@
 %define		sname	gift
 
 Summary:	The generic interface to FastTrack
-Summary(pl.UTF-8):   Interfejs do FastTracka
+Summary(pl.UTF-8):	Interfejs do FastTracka
 Name:		giFT
 Version:	0.11.8.1
 Release:	1
@@ -40,7 +40,7 @@ pakiecie giFTcurs).
 
 %package devel
 Summary:	The generic interface to FastTrack development files
-Summary(pl.UTF-8):   Pliki do rozwoju programów korzystających z giFT
+Summary(pl.UTF-8):	Pliki do rozwoju programów korzystających z giFT
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	zlib-devel
@@ -53,7 +53,7 @@ Pliki do rozwoju programów korzystającego z interfejsu do FastTracka.
 
 %package static
 Summary:	The generic interface to FastTrack static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne giFT
+Summary(pl.UTF-8):	Biblioteki statyczne giFT
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
